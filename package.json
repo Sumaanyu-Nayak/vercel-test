@@ -1,9 +1,0 @@
-{
-  "name": "Complete dashboard",
-  "version": "1.0.0",
-  "description": "Client-server app for dashboard app",
-  "scripts": {
-    "install": "cd client && npm install && cd ../server && npm install",
-    "build": "cd client && npm run build"
-  }
-}
