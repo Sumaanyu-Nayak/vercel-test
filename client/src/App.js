@@ -18,7 +18,7 @@ function App() {
     setLoading(true);
     setError(null);
 
-    const baseUrl = 'https://vercel-test-wvms.vercel.app';
+    const baseUrl = 'https://vercel-test-peach-iota.vercel.app/';
     
     try {
       const [statsRes, chartRes, activitiesRes, productsRes] = await Promise.all([
