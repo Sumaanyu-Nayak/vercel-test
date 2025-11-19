@@ -17,13 +17,15 @@ function App() {
   const fetchDashboardData = async () => {
     setLoading(true);
     setError(null);
+
+    const baseUrl = 'https://vercel-test-wvms.vercel.app';
     
     try {
       const [statsRes, chartRes, activitiesRes, productsRes] = await Promise.all([
-        fetch('/api/dashboard/stats'),
-        fetch('/api/dashboard/chart-data'),
-        fetch('/api/dashboard/activities'),
-        fetch('/api/dashboard/top-products')
+        fetch(`${baseUrl}/api/dashboard/stats`),
+        fetch(`${baseUrl}/api/dashboard/chart-data`),
+        fetch(`${baseUrl}/api/dashboard/activities`),
+        fetch(`${baseUrl}/api/dashboard/top-products`)
       ]);
 
       if (!statsRes.ok || !chartRes.ok || !activitiesRes.ok || !productsRes.ok) {
